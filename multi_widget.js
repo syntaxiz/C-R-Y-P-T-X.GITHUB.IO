@@ -105,5 +105,3 @@ if (crypt_multi_display_time)
         + hour + ':' + minutes + ':' + seconds + ' '
         + time_zone + '</div>');
 
-document.write('<div style="font-size:10px;opacity:0.6;padding:10px;">CREATED BY <a style="color:' + crypt_multi_font_color + ';" href="http://c-r-y-p-t-x.github.io/" target="_blank">C-R-Y-P-T-X</a></div>\
-</div>');

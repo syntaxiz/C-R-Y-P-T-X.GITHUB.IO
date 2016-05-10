@@ -92,7 +92,7 @@ document.write('\
 			</td>\
 		</tr>\
 	</table>\
-    <div style="text-align:center;font-size:10px;opacity:0.6;padding-top:10px;">Created by <a href="https://www.cryptonator.com" style="color:' + crypt_calc_font_color + ';" target="_blank">C - R - Y - P - T - X ©</a></div>\
+    <div style="text-align:center;font-size:10px;opacity:0.6;padding-top:10px;">Created by <a href="https://www.cryptonator.com" style="color:' + crypt_calc_font_color + ';" target="_blank">C - R - Y - P - T - X </a></div>\
 </div>');
 
 crypt_calc_price12 = 0;

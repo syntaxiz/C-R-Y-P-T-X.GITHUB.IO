@@ -92,7 +92,7 @@ document.write('\
 			</td>\
 		</tr>\
 	</table>\
-    <div style="text-align:center;font-size:30px;opacity:0.6;padding-top:10px;"><a href="faq.html" style="color:' + crypt_calc_font_color + ';" target="_blank"><F.A.Q></a></div>\
+    <div style="text-align:center;font-size:30px;opacity:0.6;padding-top:10px;"><a href="faq.html" style="color:' + crypt_calc_font_color + ';" target="_blank"> < < F.A.Q > > </a></div>\
 </div>');
 
 crypt_calc_price12 = 0;

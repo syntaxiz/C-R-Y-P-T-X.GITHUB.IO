@@ -106,4 +106,3 @@ if (crypt_multi_display_time)
         + time_zone + '</div>');
 
 document.write('<div style="font-size:10px;opacity:0.6;padding:10px;">Powered by <a style="color:' + crypt_multi_font_color + ';" href="https://www.cryptonator.com" target="_blank">Cryptonator</a></div>\
-</div>');

@@ -5,9 +5,126 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     
     <style>
+    
+    }
+
+@-webkit-keyframes text-blur {
+	0%, 50%, 90%, 100% { text-shadow: #0a0 0 0 1px; }
+	60%, 80% { text-shadow: #0a0 0 0 2px; }
+	70% { text-shadow: #0a0 0 0 5px; }
+}
+@keyframes text-blur {
+	0%, 50%, 90%, 100% { text-shadow: #0a0 0 0 1px; }
+	60%, 80% { text-shadow: #0a0 0 0 2px; }
+	70% { text-shadow: #0a0 0 0 5px; }
+}
+@-webkit-keyframes text-blink {
+	0% {
+		-webkit-transform: skewX(0deg);
+	}
+	20% {
+		-webkit-transform: skewX(0deg);
+	}
+	21% {
+		-webkit-transform: skewX(-3deg);
+	}
+	35% {
+		opacity: 1;
+		-webkit-transform: skewX(0deg);
+	}
+	35.5% {
+		opacity: .3;
+		-webkit-transform: skewX(70deg);
+	}
+	36% {
+		-webkit-transform: skewX(-60deg);
+	}
+	36.5% {
+		opacity: 1;
+		-webkit-transform: skewX(0deg);
+	}
+	100% {
+		-webkit-transform: skewX(0deg);
+	}
+}
+@keyframes text-blink {
+	0% {
+		transform: skewX(0deg);
+	}
+	20% {
+		transform: skewX(0deg);
+	}
+	21% {
+		transform: skewX(-3deg);
+	}
+	35% {
+		opacity: 1;
+		transform: skewX(0deg);
+	}
+	35.5% {
+		opacity: .3;
+		transform: skewX(70deg);
+	}
+	36% {
+		transform: skewX(-60deg);
+	}
+	36.5% {
+		opacity: 1;
+		transform: skewX(0deg);
+	}
+	100% {
+		transform: skewX(0deg);
+	}
+}
+
+a {
+	color: inherit;
+}
+
+a.folder {
+	//color: #88f;
+}
+
+p {
+	margin: .1em 0;
+}
+
+ul {
+	list-style: none;
+	padding: 0 0 0 1em;
+}
+
+@-webkit-keyframes blink {
+	0% { opacity: 0; }
+	25% { opacity: 0; }
+	25.1% { opacity: 1; }
+	100% { opacity: 1; }
+}
+/* Hahaha, Firefox supports <blink> natively! */
+blink {
+	-webkit-animation: blink 1s infinite;
+}
+
+ul {
+	list-style: none;
+	padding: 0 0 0 1em;
+}
+
+@-webkit-keyframes blink {
+	0% { opacity: 0; }
+	25% { opacity: 0; }
+	25.1% { opacity: 1; }
+	100% { opacity: 1; }
+}
+/* Hahaha, Firefox supports <blink> natively! */
+blink {
+	-webkit-animation: blink 1s infinite;
+}
+    
    a { 
     text-decoration: none;
    } 
+    
   </style>
 
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
@@ -39,14 +156,16 @@
       <section id="main_content">
         <h2>
           
+          <script type="text/javascript">
+crypt_calc_background_color = "#000000";crypt_calc_border_width = 0;crypt_calc_border_color = "#000000";crypt_calc_font_size = "medium";crypt_calc_font_color = "#FF8000";</script><script type="text/javascript" src="calc_widget.js"></script>
+          
          <script type="text/javascript">
 crypt_multi_num_cur = "4";
 crypt_base_cur_0 = "Bitcoin (BTC)";crypt_target_cur_0 = "Ruble (RUR)";crypt_base_cur_1 = "Monero (XMR)";crypt_target_cur_1 = "Ruble (RUR)";crypt_base_cur_2 = "Bytecoin (BCN)";crypt_target_cur_2 = "Ruble (RUR)";crypt_base_cur_3 = "Ethereum (ETH)";crypt_target_cur_3 = "Ruble (RUR)";crypt_multi_border_width = 0;crypt_multi_border_color = "#151515";crypt_multi_font_size = "large";crypt_multi_font_color = "#b5e853";</script><script type="text/javascript" src="multi_widget.js"></script>
 </h2>
 
 
-<script type="text/javascript">
-crypt_calc_background_color = "#000000";crypt_calc_border_width = 0;crypt_calc_border_color = "#000000";crypt_calc_font_size = "large";crypt_calc_font_color = "#FF8000";</script><script type="text/javascript" src="calc_widget.js"></script>
+
 
 <center><h2> <p><strong>./> <a href="http://c-r-y-p-t-x.github.io/">_¢-R-¥-₽-T-x </a> 2016 © </strong></p></h2></center>
       </section>

@@ -77,7 +77,7 @@ document.write('\
     <table width="100%" cellpadding="6">\
 		<tr>\
 			<td style="width:45%;">\
-				<input id="amount-1" type="text" placeholder="." style="width:100%;' + crypt_calc_font_style + '">\
+				<input id="amount-1" type="text" placeholder="0" style="width:100%;' + crypt_calc_font_style + '">\
 			</td>\
 			<td style="width:55%;">\
 				<select id="cur-1" style="width:100%;' + crypt_calc_font_style + '">' + outList("BTC") + '</select>\
@@ -85,7 +85,7 @@ document.write('\
 		</tr>\
 		<tr>\
 			<td style="width:45%;">\
-				<input id="amount-2" type="text" placeholder="." style="width:100%;' + crypt_calc_font_style + '">\
+				<input id="amount-2" type="text" placeholder="0" style="width:100%;' + crypt_calc_font_style + '">\
 			</td>\
 			<td style="width:55%;">\
 				<select id="cur-2" style="width:100%;' + crypt_calc_font_style + '">' + outList("RUR") + '</select>\

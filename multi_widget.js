@@ -101,7 +101,7 @@ for (var i = 0; i < crypt_multi_num_cur; ++i) {
 }
 
 if (crypt_multi_display_time)
-    document.write('<div style="font-size:40%;opacity:0.6;padding-top:10px;padding-left:10px;">Последнее обновление ' + day + ' ' + month + ' ' + year + ' '
+    document.write('<div style="font-size:40%;opacity:0.6;padding-top:10px;padding-left:10px;">/>_Обновлено: ' + day + ' ' + month + ' ' + year + ' '
         + hour + ':' + minutes + ':' + seconds + ' '
         + time_zone + '</div>');
 

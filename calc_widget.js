@@ -8,7 +8,7 @@ function httpGet(theUrl)
     return xmlHttp.responseText;
 }
 
-crypt_calc_background_color = typeof crypt_calc_background_color == "undefined" ? "#FFFFFF" : crypt_calc_background_color;
+crypt_calc_background_color = typeof crypt_calc_background_color == "undefined" ? "#FF851B" : crypt_calc_background_color;
 crypt_calc_transperency = typeof crypt_calc_transperency == "undefined" ? true : crypt_calc_transperency;
 crypt_calc_border_width = typeof crypt_calc_border_width == "undefined" ? 1 : crypt_calc_border_width;
 crypt_calc_border_color = typeof crypt_calc_border_color == "undefined" ? "#2ECC40" : crypt_calc_border_color;

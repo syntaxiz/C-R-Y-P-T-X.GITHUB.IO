@@ -25,7 +25,7 @@ crypt_single_border_color = typeof crypt_single_border_color == "undefined" ? "#
 crypt_single_border_corners = typeof crypt_single_border_corners == "undefined" ? "rounded" : crypt_single_border_corners;
 crypt_single_font_family = typeof crypt_single_font_family == "undefined" ? "Arial" : crypt_single_font_family;
 crypt_single_font_size = typeof crypt_single_font_size == "undefined" ? "medium" : crypt_single_font_size;
-crypt_single_font_color = typeof crypt_single_font_color == "undefined" ? "#000000" : crypt_single_font_color;
+crypt_single_font_color = typeof crypt_single_font_color == "undefined" ? "#FF851B" : crypt_single_font_color;
 crypt_single_display_time = typeof crypt_single_display_time == "undefined" ? true : crypt_single_display_time;
 
 crypt_single_getPar = eval('(' + httpGet("https://www.cryptonator.com/api/ticker/" +

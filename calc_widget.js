@@ -15,7 +15,7 @@ crypt_calc_border_color = typeof crypt_calc_border_color == "undefined" ? "#2ECC
 crypt_calc_border_corners = typeof crypt_calc_border_corners == "undefined" ? "rounded" : crypt_calc_border_corners;
 crypt_calc_font_family = typeof crypt_calc_font_family == "undefined" ? "Arial" : crypt_calc_font_family;
 crypt_calc_font_size = typeof crypt_calc_font_size == "undefined" ? "medium" : crypt_calc_font_size;
-crypt_calc_font_color = typeof crypt_calc_font_color == "undefined" ? "#000000" : crypt_calc_font_color;
+crypt_calc_font_color = typeof crypt_calc_font_color == "undefined" ? "#FF851B" : crypt_calc_font_color;
 
 crypt_calc_options = eval('(' + httpGet("https://www.cryptonator.com/api/currencies") + ')');
 crypt_calc_optionsArr = new Array();

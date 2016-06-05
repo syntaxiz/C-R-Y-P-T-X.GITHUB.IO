@@ -31,7 +31,7 @@ crypt_single_display_time = typeof crypt_single_display_time == "undefined" ? tr
 crypt_single_getPar = eval('(' + httpGet("https://www.cryptonator.com/api/ticker/" +
     crypt_single_base_currency.match(/.*?\(([0-9a-z]+)\)/i)[1] + "-" + crypt_single_target_currency.match(/.*?\(([0-9a-z]+)\)/i)[1]) + ')');
 
-crypt_single_month_name = new Array("Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "October", "November", "December");
+crypt_single_month_name = new Array("Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря");
 
 crypt_single_date = new Date(crypt_single_getPar.timestamp * 1000);
 crypt_single_day = FormatNumberLength(crypt_single_date.getDate(), 2);

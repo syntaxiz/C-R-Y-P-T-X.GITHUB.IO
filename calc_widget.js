@@ -76,18 +76,18 @@ document.write('\
 <div class="cryptonatorwidget" style="border-radius:4px;padding:10px;' + crypt_calc_style + '">\
     <table width="100%" cellpadding="6">\
 		<tr>\
-			<td style="width:45%;">\
-				<input id="amount-1" type="text" placeholder="0" style="width:100%;' + crypt_calc_font_style + '">\
+			<td style="width:50%;">\
+				<input id="amount-1" type="text" placeholder="" style="width:100%;' + crypt_calc_font_style + '">\
 			</td>\
-			<td style="width:55%;">\
+			<td style="width:50%;">\
 				<select id="cur-1" style="width:100%;' + crypt_calc_font_style + '">' + outList("BTC") + '</select>\
 			</td>\
 		</tr>\
 		<tr>\
-			<td style="width:45%;">\
-				<input id="amount-2" type="text" placeholder="0" style="width:100%;' + crypt_calc_font_style + '">\
+			<td style="width:50%;">\
+				<input id="amount-2" type="text" placeholder="" style="width:100%;' + crypt_calc_font_style + '">\
 			</td>\
-			<td style="width:55%;">\
+			<td style="width:50%;">\
 				<select id="cur-2" style="width:100%;' + crypt_calc_font_style + '">' + outList("RUR") + '</select>\
 			</td>\
 		</tr>\

@@ -1,4 +1,95 @@
 <html>
+  
+  <style>
+  
+  @-webkit-keyframes text-blink {
+	0% {
+		-webkit-transform: skewX(0deg);
+	}
+	20% {
+		-webkit-transform: skewX(0deg);
+	}
+	21% {
+		-webkit-transform: skewX(-3deg);
+	}
+	35% {
+		opacity: 1;
+		-webkit-transform: skewX(0deg);
+	}
+	35.5% {
+		opacity: .3;
+		-webkit-transform: skewX(70deg);
+	}
+	36% {
+		-webkit-transform: skewX(-60deg);
+	}
+	36.5% {
+		opacity: 1;
+		-webkit-transform: skewX(0deg);
+	}
+	100% {
+		-webkit-transform: skewX(0deg);
+	}
+}
+@keyframes text-blink {
+	0% {
+		transform: skewX(0deg);
+	}
+	20% {
+		transform: skewX(0deg);
+	}
+	21% {
+		transform: skewX(-3deg);
+	}
+	35% {
+		opacity: 1;
+		transform: skewX(0deg);
+	}
+	35.5% {
+		opacity: .3;
+		transform: skewX(70deg);
+	}
+	36% {
+		transform: skewX(-60deg);
+	}
+	36.5% {
+		opacity: 1;
+		transform: skewX(0deg);
+	}
+	100% {
+		transform: skewX(0deg);
+	}
+}
+
+a {
+	color: inherit;
+}
+
+a.folder {
+	//color: #88f;
+}
+
+p {
+	margin: .1em 0;
+}
+
+ul {
+	list-style: none;
+	padding: 0 0 0 1em;
+}
+
+@-webkit-keyframes blink {
+	0% { opacity: 0; }
+	25% { opacity: 0; }
+	25.1% { opacity: 1; }
+	100% { opacity: 1; }
+}
+/* Hahaha, Firefox supports <blink> natively! */
+blink {
+	-webkit-animation: blink 1s infinite;
+}
+
+</style>
 
 <head>
   <meta charset="utf-8">

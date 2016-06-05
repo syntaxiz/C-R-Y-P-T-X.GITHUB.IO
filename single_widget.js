@@ -98,7 +98,7 @@ else {
 
 if (crypt_single_display_time && crypt_single_getPar.success != false)
     document.write('<div style="font-size:70%;opacity:0.6;padding-top:10px;">\
-            Updated ' + crypt_single_day + ' ' + crypt_single_month + ' ' + crypt_single_year + ' '
+            >_Обновлено ' + crypt_single_day + ' ' + crypt_single_month + ' ' + crypt_single_year + ' '
             + crypt_single_hour + ':' + crypt_single_minutes + ':' + crypt_single_seconds + ' '
             + crypt_single_time_zone + '\
         </div>');

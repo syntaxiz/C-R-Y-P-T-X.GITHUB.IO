@@ -1,0 +1,251 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="http://v4.pingendo.com/assets/bootstrap/themes/default.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <nav draggable="true">
+    <a class="navbar-brand"><img height="20" alt="Brand" src="https://bitpress.ru/wp-content/themes/allegro-theme/images/favicon.ico"></a>
+    <ul class="nav navbar-nav pull-right">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+  </nav>
+  <nav class="bg-faded navbar navbar-fixed-top navbar-full navbar-light text-xs-center">
+    <a class="navbar-brand text-success text-xs-center"><img height="45" alt="Brand" src="https://bitpress.ru/wp-content/themes/allegro-theme/images/favicon.ico"></a>
+    <ul class="nav navbar-nav pull-right">
+
+      <li class="dropdown nav-item text-warning text-xs-center"> <a class="active dropdown-toggle nav-link text-warning" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-2x fa-fw fa-wrench"></i></a>
+        <div class="dropdown-menu"> <a class="dropdown-item" href="#">Контракт</a> <a class="dropdown-item" href="#">Кошелёк</a> <a class="dropdown-item" href="#">Обмен</a>
+          <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Другое</a> </div>
+      </li>
+      <li class="nav-item"><a class="nav-link text-success" href="#"><i class="fa fa-2x fa-dollar fa-fw"></i></a></li>
+      <li class="nav-item"><a class="nav-link text-danger" href="#"><i class="fa fa-2x fa-code fa-fw"></i></a></li>
+      <li class="active nav-item text-success">
+        <a class="nav-link text-success" href="#"><i class="fa fa-2x fa-bitcoin fa-fw"></i> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item"><a class="nav-link text-danger" href="#"><i class="fa fa-2x fa-fw fa-terminal"></i></a></li>
+      <li class="nav-item">
+        <a class="nav-link text-success" href="#"><i class="fa fa-2x fa-fw fa-ruble"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-success" href="#"><i class="fa fa-2x fa-credit-card fa-fw"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-warning" href="#"><i class="fa fa-2x fa-balance-scale fa-fw"></i></a>
+      </li>
+
+    </ul>
+  </nav>
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 p-y-2">
+          <hr class="" draggable="true">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section text-xs-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-4">
+          <a class="text-success"><i class="fa fa-4x fa-fw fa-line-chart"></i></a>
+        </div>
+        <div class="col-xs-4">
+          <a class="text-success"><i class="fa fa-4x fa-fw fa-bar-chart-o"></i></a>
+        </div>
+        <div class="col-xs-4">
+          <a class="text-success"><i class="fa fa-4x fa-fw fa-area-chart"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="" draggable="true">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-xs-center">
+          <script type="text/javascript" src="https://www.cryptonator.com/ui/js/widget/calc_widget.js"></script>
+        </div>
+      </div>
+      <div class="p-y-1 row">
+
+        <div class="col-lg-3 text-xs-center">
+          <script type="text/javascript">
+            crypt_multi_num_cur = "3";
+            crypt_base_cur_0 = "Bitcoin (BTC)";crypt_target_cur_0 = "US Dollar (USD)";crypt_base_cur_1 = "Litecoin (LTC)";crypt_target_cur_1 = "US Dollar (USD)";crypt_base_cur_2 = "Dogecoin (DOGE)";crypt_target_cur_2 = "US Dollar (USD)";
+          </script>
+          <script type="text/javascript" src="https://www.cryptonator.com/ui/js/widget/multi_widget.js"></script>
+        </div>
+        <div class="col-lg-3 text-xs-center">
+          <script type="text/javascript">
+            crypt_multi_num_cur = "3";
+            crypt_base_cur_0 = "Bitcoin (BTC)";crypt_target_cur_0 = "US Dollar (USD)";crypt_base_cur_1 = "Litecoin (LTC)";crypt_target_cur_1 = "US Dollar (USD)";crypt_base_cur_2 = "Dogecoin (DOGE)";crypt_target_cur_2 = "US Dollar (USD)";
+          </script>
+          <script type="text/javascript" src="https://www.cryptonator.com/ui/js/widget/multi_widget.js"></script>
+        </div>
+        <div class="col-lg-3 text-xs-center">
+          <script type="text/javascript">
+            crypt_multi_num_cur = "3";
+            crypt_base_cur_0 = "Bitcoin (BTC)";crypt_target_cur_0 = "US Dollar (USD)";crypt_base_cur_1 = "Litecoin (LTC)";crypt_target_cur_1 = "US Dollar (USD)";crypt_base_cur_2 = "Dogecoin (DOGE)";crypt_target_cur_2 = "US Dollar (USD)";
+          </script>
+          <script type="text/javascript" src="https://www.cryptonator.com/ui/js/widget/multi_widget.js"></script>
+        </div>
+        <div class="col-lg-3 text-xs-center">
+          <script type="text/javascript">
+            crypt_multi_num_cur = "3";
+            crypt_base_cur_0 = "Bitcoin (BTC)";crypt_target_cur_0 = "US Dollar (USD)";crypt_base_cur_1 = "Litecoin (LTC)";crypt_target_cur_1 = "US Dollar (USD)";crypt_base_cur_2 = "Dogecoin (DOGE)";crypt_target_cur_2 = "US Dollar (USD)";
+          </script>
+          <script type="text/javascript" src="https://www.cryptonator.com/ui/js/widget/multi_widget.js"></script>
+        </div>
+
+      </div>
+      <div class="p-y-1 row" draggable="true">
+        <div class="col-lg-12 text-xs-center">
+          <script type="text/javascript" src="https://www.cryptonator.com/ui/js/widget/calc_widget.js"></script>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="" draggable="true">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section text-xs-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-4">
+          <a class="text-success"><i class="fa fa-5x fa-fw fa-ruble"></i></a>
+        </div>
+        <div class="col-xs-4">
+          <a class="text-warning"><i class="fa fa-5x fa-fw fa-exchange"></i></a>
+        </div>
+        <div class="col-xs-4">
+          <a class="text-success"><i class="fa fa-5x fa-fw fa-bitcoin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="bg-faded p-y-3 section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-xs-center">
+          <h1 class="pi-draggable pi-item"><i class="fa fa-2x fa-fw fa-user-secret text-success"></i></h1>
+          <p class="text-warning">
+            <strong>CryptX, Inc.</strong>
+            <br>795 Folsom Ave, Suite 600
+            <br>San Francisco, CA 94107
+            <br>
+            <abbr title="Phone">P:</abbr>(123) 456-7890</p>
+          <div class="m-y-2 m-y-lg row text-center">
+            <div class="col-xs-4 text-left">
+              <a class="text-success"><i class="fa fa-3x fa-cc-mastercard text-success"></i></a>
+            </div>
+            <div class="col-xs-4 text-left">
+              <a class="text-success"><i class="fa fa-3x fa-cc-visa text-success"></i></a>
+            </div>
+            <div class="col-xs-4 text-left">
+              <a class="text-success"><i class="fa fa-3x fa-money text-success"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 text-xs-center">
+          <h1 class="pi-draggable pi-item"><i class="fa fa-2x fa-envelope-o fa-fw text-success"></i></h1>
+          <form>
+            <fieldset class="form-group text-xs-center">
+
+              <input type="text" class="form-control text-primary text-xs-center" id="exampleInputEmail1" placeholder="ник">
+            </fieldset>
+            <fieldset class="form-group text-primary text-xs-center">
+
+              <input type="email" class="form-control text-xs-center" id="exampleInputEmail1" placeholder="текст">
+            </fieldset>
+            <button type="submit" class="btn btn-block btn-lg btn-warning" data-toggle="modal"><i class="fa fa-2x fa-envelope fa-fw"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

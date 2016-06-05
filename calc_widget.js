@@ -57,7 +57,7 @@ switch (crypt_calc_font_size) {
         break;
 
     case 'large':
-        crypt_calc_font_size = "200%";
+        crypt_calc_font_size = "170%";
         break;
 }
 

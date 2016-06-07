@@ -1,0 +1,439 @@
+<html>
+
+<head>
+  <style>
+    @-webkit-keyframes text-blink {
+      0% {
+        -webkit-transform: skewX(0deg);
+      }
+      20% {
+        -webkit-transform: skewX(0deg);
+      }
+      21% {
+        -webkit-transform: skewX(-3deg);
+      }
+      35% {
+        opacity: 1;
+        -webkit-transform: skewX(0deg);
+      }
+      35.5% {
+        opacity: .3;
+        -webkit-transform: skewX(70deg);
+      }
+      36% {
+        -webkit-transform: skewX(-60deg);
+      }
+      36.5% {
+        opacity: 1;
+        -webkit-transform: skewX(0deg);
+      }
+      100% {
+        -webkit-transform: skewX(0deg);
+      }
+    }
+    
+    @keyframes text-blink {
+      0% {
+        transform: skewX(0deg);
+      }
+      20% {
+        transform: skewX(0deg);
+      }
+      21% {
+        transform: skewX(-3deg);
+      }
+      35% {
+        opacity: 1;
+        transform: skewX(0deg);
+      }
+      35.5% {
+        opacity: .3;
+        transform: skewX(70deg);
+      }
+      36% {
+        transform: skewX(-60deg);
+      }
+      36.5% {
+        opacity: 1;
+        transform: skewX(0deg);
+      }
+      100% {
+        transform: skewX(0deg);
+      }
+    }
+    
+    a {
+      color: inherit;
+    }
+    
+    a.folder {
+      //color: #88f;
+    }
+    
+    p {
+      margin: .1em 0;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0 0 0 1em;
+    }
+    
+    @-webkit-keyframes blink {
+      0% {
+        opacity: 0;
+      }
+      25% {
+        opacity: 0;
+      }
+      25.1% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    /* Hahaha, Firefox supports <blink> natively! */
+    
+    blink {
+      -webkit-animation: blink 1s infinite;
+    }
+  </style>
+  
+
+    <link rel="shortcut icon" href="/Significon-Exchange-512.png">
+  <link rel="icon" src="/Significon-Exchange-512.png">
+  <meta charset="utf-8">
+  <title>CryptX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="http://v4.pingendo.com/assets/bootstrap/themes/default.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+
+  <nav draggable="true">
+    <a class="navbar-brand"><img height="60" alt="Brand" src="images/favicon.ico"></a>
+    <ul class="nav navbar-nav pull-right">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+  </nav>
+  <nav class="bg-faded navbar navbar-fixed-top navbar-full navbar-light text-xs-center">
+     <a class="navbar-brand text-success text-xs-center" href="http://c-r-y-p-t-x.github.io/ "><img height="45" alt="Brand" src="/Significon-Exchange-512.png"></a>
+    <ul class="nav navbar-nav pull-right">
+
+      <li class="dropdown nav-item text-warning text-xs-center"> <a class="active dropdown-toggle nav-link text-success" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-2x fa-fw fa-user"></i></a>
+        <div class="dropdown-menu"> <a class="dropdown-item" href="contract1.html"><i class="fa fa-2x fa-fw text-danger fa-legal"></i>Контракт</a> <a class="dropdown-item" href="#"><i class="fa fa-2x fa-code fa-fw text-danger"></i>Кошелёк</a> <a class="dropdown-item" href="#"><i class="fa fa-2x fa-fw fa-terminal"></i>Настройки</a>
+          <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fa fa-2x fa-fw fa-wrench text-danger"></i>Другое</a> </div>
+      </li>
+      
+      <li class="dropdown nav-item text-warning text-xs-center"> <a class="active dropdown-toggle nav-link text-success" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-2x fa-fw fa-gear"></i></a>
+        <div class="dropdown-menu"> <a class="dropdown-item" href="#"><i class="fa fa-2x fa-fw text-danger fa-legal"></i>Контракт</a> <a class="dropdown-item" href="#"><i class="fa fa-2x fa-code fa-fw text-danger"></i>Кошелёк</a> <a class="dropdown-item" href="#"><i class="fa fa-2x fa-fw fa-terminal"></i>Настройки</a>
+          <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fa fa-2x fa-fw fa-wrench text-danger"></i>Другое</a> </div>
+      </li>
+      
+
+
+      <li class="active nav-item text-success">
+        <a class="nav-link text-success" href="#"><i class="fa fa-2x fa-bitcoin fa-fw text-success"></i> <span class="sr-only">(current)</span></a>
+      </li>
+
+
+      <li class="nav-item">
+        <a class="nav-link text-success" href="#"><i class="fa fa-2x fa-credit-card fa-fw text-success"></i></a>
+      </li>
+
+
+    </ul>
+  </nav>
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="" draggable="true">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section text-xs-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-4">
+          <a class="text-primary"><i class="fa fa-4x fa-fw fa-line-chart"></i></a>
+        </div>
+        <div class="col-xs-4">
+          <a class="text-warning"><i class="fa fa-4x fa-fw fa-balance-scale"></i></a>
+        </div>
+        <div class="col-xs-4">
+          <a class="text-info"><i class="fa fa-4x fa-fw fa-bar-chart-o"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="" draggable="true">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-xs-center">
+          <script type="text/javascript">
+            crypt_calc_background_color = "#000000";crypt_calc_border_width = 1;crypt_calc_border_color = "#2ECC40";crypt_calc_font_size = "small";crypt_calc_font_color = "#FF851B";
+          </script>
+          <script type="text/javascript" src="calc_widget.js"></script>
+        </div>
+      </div>
+      <div class=" row text-xs-center">
+        
+        
+        
+      
+          
+
+      </div>
+      <div class=" row" draggable="true">
+        <div class="col-lg-12 text-xs-center">
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="" draggable="true">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section text-xs-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-4">
+          <a class="text-success"><i class="fa fa-5x fa-fw fa-ruble"></i></a>
+        </div>
+        <div class="col-xs-4">
+          <a class="text-warning"><i class="fa fa-5x fa-fw fa-exchange"></i></a>
+        </div>
+        <div class="col-xs-4">
+          <a class="text-success"><i class="fa fa-5x fa-fw fa-bitcoin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="" draggable="true">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+   <div class="p-y-1 row text-xs-center">
+        
+        
+        <div class="section">
+      <div class="background-image" style="background-image : url('https://bitcore.io/images/icosahedron-spheres.8dc5f46a.png')"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-xs-center">
+            <center>
+              <iframe width="100%" height="100%" src="https://blockchain.info/" frameborder="0" allowfullscreen=""></iframe>
+            </center>
+          </div>
+        </div>
+
+
+  <div class="bg-faded section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-xs-center">
+          <h1 class="pi-draggable pi-item text-muted"><i class="fa fa-2x fa-fw fa-user-secret m-y-2 p-y-2 text-warning"></i></h1>
+          <p class="text-primary text-xs-left">
+            &gt;
+            <blink>_</blink><strong>CryptX(Криптикс), Inc.</strong>
+            <br>&gt;
+            <blink>_</blink>Web Development
+            <br>&gt;
+            <blink>_</blink>Russia
+            <br>&gt;
+            <blink>_</blink>
+            <abbr title="Phone">P:</abbr>(123) 456-7890</p>
+          <div class="m-y-2 m-y-lg row text-center">
+            <div class="col-xs-4 text-left">
+              <a class="text-warning"><i class="fa fa-3x fa-cc-mastercard text-success"></i></a>
+            </div>
+            <div class="col-xs-4 text-left">
+              <a class="text-success"><i class="fa fa-3x fa-cc-visa text-success"></i></a>
+            </div>
+            <div class="col-xs-4 text-left">
+              <a class="text-warning"><i class="fa fa-3x fa-cc-paypal text-success"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 text-xs-center">
+          <h1 class="pi-draggable pi-item"><i class="fa fa-2x fa-envelope-o fa-fw m-y-2 p-y-2 text-success"></i></h1>
+          <form>
+            <fieldset class="form-group text-primary text-xs-center">
+
+              <input type="text" class="form-control text-primary text-xs-center" id="exampleInputEmail1" placeholder="id">
+            </fieldset>
+            <fieldset class="form-group text-primary text-xs-center">
+
+              <input type="text" class="form-control text-primary text-xs-center" id="exampleInputEmail1" placeholder="/>_">
+            </fieldset>
+            <button type="submit" class="btn btn-block btn-lg btn-warning" data-toggle="modal"><i class="fa fa-2x fa-envelope fa-fw"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="lead text-warning text-xs-center"><b><span class="text-success">/&gt;<blink class="text-warning">_</blink>© by ¢-R-¥-₽-T-x 2016</span><blink class="text-warning">.</blink></b></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+ 
+  
+  
+  
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- livechat24-7.com widget -->  <script type = 'text/javascript'>window.$_liveChat247 || function(a, b) {b.$_liveChat247 = function(a, b) {var c = a.getElementsByTagName('head')[0];b._hostURL = 'https://www.livechat24-7.com';var d = a.createElement('script');d.src = b._hostURL + '/dashboard/liveChatIframe.js', d.type = 'text/javascript', c.appendChild(d), b._liveChat = {}, b._liveChat.profile = {accountId: '5743cceede7841218ac378c4'}}, b.$_liveChat247(a, b)}(document, window); </script> <!-- /livechat24-7.com widget --> 
+  
+  
+ 
+ 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

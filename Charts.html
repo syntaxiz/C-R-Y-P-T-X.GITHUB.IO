@@ -1,0 +1,597 @@
+<html>
+
+<head>
+  <style>
+    @-webkit-keyframes text-blink {
+      0% {
+        -webkit-transform: skewX(0deg);
+      }
+      20% {
+        -webkit-transform: skewX(0deg);
+      }
+      21% {
+        -webkit-transform: skewX(-3deg);
+      }
+      35% {
+        opacity: 1;
+        -webkit-transform: skewX(0deg);
+      }
+      35.5% {
+        opacity: .3;
+        -webkit-transform: skewX(70deg);
+      }
+      36% {
+        -webkit-transform: skewX(-60deg);
+      }
+      36.5% {
+        opacity: 1;
+        -webkit-transform: skewX(0deg);
+      }
+      100% {
+        -webkit-transform: skewX(0deg);
+      }
+    }
+    
+    @keyframes text-blink {
+      0% {
+        transform: skewX(0deg);
+      }
+      20% {
+        transform: skewX(0deg);
+      }
+      21% {
+        transform: skewX(-3deg);
+      }
+      35% {
+        opacity: 1;
+        transform: skewX(0deg);
+      }
+      35.5% {
+        opacity: .3;
+        transform: skewX(70deg);
+      }
+      36% {
+        transform: skewX(-60deg);
+      }
+      36.5% {
+        opacity: 1;
+        transform: skewX(0deg);
+      }
+      100% {
+        transform: skewX(0deg);
+      }
+    }
+    
+    a {
+      color: inherit;
+    }
+    
+    a.folder {
+      //color: #88f;
+    }
+    
+    p {
+      margin: .1em 0;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0 0 0 1em;
+    }
+    
+    @-webkit-keyframes blink {
+      0% {
+        opacity: 0;
+      }
+      25% {
+        opacity: 0;
+      }
+      25.1% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    /* Hahaha, Firefox supports <blink> natively! */
+    
+    blink {
+      -webkit-animation: blink 1s infinite;
+    }
+  </style>
+
+
+  <link rel="shortcut icon" href="/Significon-Exchange-512.png">
+  <link rel="icon" src="/Significon-Exchange-512.png">
+  <meta charset="utf-8">
+  <title>CryptX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="http://v4.pingendo.com/assets/bootstrap/themes/default.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+
+  <nav draggable="true">
+    <a class="navbar-brand"><img height="60" alt="Brand" src="images/favicon.ico"></a>
+    <ul class="nav navbar-nav pull-right">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+  </nav>
+  <nav class="bg-faded navbar navbar-fixed-top navbar-full navbar-light text-xs-center">
+    <a class="navbar-brand text-success text-xs-center" href="http://c-r-y-p-t-x.github.io/ "><img height="45" alt="Brand" src="/Significon-Exchange-512.png"></a>
+    <ul class="nav navbar-nav pull-right">
+
+      <li class="dropdown nav-item text-warning text-xs-center"> <a class="active dropdown-toggle nav-link text-success" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-2x fa-fw fa-gears"></i></a>
+        <div class="dropdown-menu"> <a class="dropdown-item" href="indexe.html"><i class="fa fa-2x fa-fw text-danger fa-bitcoin"></i>Следить за транзакцией</a> <a class="dropdown-item" href=".html"><i class="fa fa-2x fa-fw text-danger fa-globe"></i>Карта</a> <a class="dropdown-item"
+          href="contract.html"><i class="fa fa-2x fa-fw text-danger fa-legal"></i>Контракт</a> <a class="dropdown-item" href="faq.html"><i class="fa fa-2x fa-code fa-fw text-danger"></i>Кошелёк</a> <a class="dropdown-item" href="contract1"><i class="fa fa-2x fa-fw fa-terminal"></i>Настройки</a>
+          <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fa fa-2x fa-fw fa-wrench text-danger"></i>Другое</a> </div>
+      </li>
+
+      <li class="dropdown nav-item text-warning text-xs-center"> <a class="active dropdown-toggle nav-link text-success" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-2x fa-fw fa-gear"></i></a>
+        <div class="dropdown-menu"> <a class="dropdown-item" href="#"><i class="fa fa-2x fa-fw text-danger fa-legal"></i>Контракт</a> <a class="dropdown-item" href="#"><i class="fa fa-2x fa-code fa-fw text-danger"></i>Кошелёк</a> <a class="dropdown-item" href="#"><i class="fa fa-2x fa-fw fa-terminal"></i>Настройки</a>
+          <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fa fa-2x fa-fw fa-wrench text-danger"></i>Другое</a> </div>
+      </li>
+
+
+
+      <li class="active nav-item text-success">
+        <a class="nav-link text-success" href="#"><i class="fa fa-2x fa-user fa-fw text-success"></i> <span class="sr-only">(current)</span></a>
+      </li>
+
+
+      <li class="nav-item">
+        <a class="nav-link text-success" href="#"><i class="fa fa-2x fa-flask fa-fw text-success"></i></a>
+      </li>
+
+
+    </ul>
+  </nav>
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="" draggable="true">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section text-xs-center">
+  
+  
+  <center><iframe frameborder="0" scrolling="auto" src="price charts.html" width="100%" height="100%"></iframe></center>
+  
+  
+  
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="" draggable="true">
+        </div>
+        <div class="col-xs-4">
+          <a class="text-primary"><i class="fa fa-3x fa-fw fa-line-chart"></i></a>
+        </div>
+        <div class="col-xs-4">
+          <a class="btn btn-block btn-sm btn-warning-outline" aria-pressed="false" data-toggle="modal" data-target="#modal2" href="#"><i class="fa fa-3x fa-balance-scale fa-fw"></i></a>
+        </div>
+        <div class="col-xs-4">
+          <a class="text-info"><i class="fa fa-3x fa-fw fa-bar-chart-o"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="" draggable="true">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-xs-center">
+          <script type="text/javascript">
+            crypt_calc_background_color = "#000000";crypt_calc_border_width = 1;crypt_calc_border_color = "#2ECC40";crypt_calc_font_size = "large";crypt_calc_font_color = "#FF851B";
+          </script>
+          <script type="text/javascript" src="calc_widget.js"></script>
+        </div>
+      </div>
+      <div class=" row text-xs-center">
+
+
+
+
+
+
+      </div>
+      <div class=" row" draggable="true">
+        <div class="col-lg-12 text-xs-center">
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="" draggable="true">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section text-xs-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-4">
+          <a class="text-success"><i class="fa fa-3x fa-fw fa-ruble"></i></a>
+        </div>
+        <div class="col-xs-4">
+          <a href="#" class="btn btn-block btn-sm btn-warning-outline" data-toggle="modal" data-target="#modal3" aria-pressed="false"><i class="fa fa-3x fa-exchange fa-fw"></i></a>
+        </div>
+        <div class="col-xs-4">
+          <a class="text-success"><i class="fa fa-3x fa-fw fa-bitcoin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="" draggable="true">
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="row text-xs-center">
+
+
+    <div class="section">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-xs-center">
+            <center>
+              <div class="row">
+
+                <div class="col-lg-3 text-xs-center">
+                  <script type="text/javascript">
+                    crypt_single_base_currency = "Bitcoin (BTC)";crypt_single_target_currency = "Ruble (RUR)";crypt_single_font_size = "large";crypt_single_border_width = 2;
+                  </script>
+                  <script type="text/javascript" src="single_widget.js"></script>
+                </div>
+                <div class="col-lg-3 text-xs-center">
+                  <script type="text/javascript">
+                    crypt_single_base_currency = "Bytecoin (BCN)";crypt_single_target_currency = "Ruble (RUR)";crypt_single_font_size = "large";crypt_single_border_width = 2;
+                  </script>
+                  <script type="text/javascript" src="single_widget.js"></script>
+                </div>
+                <div class="col-lg-3 text-xs-center">
+                  <script type="text/javascript">
+                    crypt_single_base_currency = "Ethereum (ETH)";crypt_single_target_currency = "Ruble (RUR)";crypt_single_font_size = "large";crypt_single_border_width = 2;
+                  </script>
+                  <script type="text/javascript" src="single_widget.js"></script>
+                </div>
+                <div class="col-lg-3 text-xs-center">
+                  <script type="text/javascript">
+                    crypt_single_base_currency = "Monero (XMR)";crypt_single_target_currency = "Ruble (RUR)";crypt_single_font_size = "large";crypt_single_border_width = 2;
+                  </script>
+                  <script type="text/javascript" src="single_widget.js"></script>
+                </div>
+
+              </div>
+            </center>
+          </div>
+
+          <a class="carousel-control left text-success" href="#carousel-example" data-slide="prev"><i class="icon-prev  fa fa-3x fa-arrow-left"></i></a>
+          <a class="carousel-control right text-success" href="#carousel-example" data-slide="next"><i class="icon-next fa fa-3x fa-arrow-right"></i></a>
+
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+  
+  
+  
+  
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="" draggable="true">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section text-xs-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-4">
+          <a class="text-success"><i class="fa fa-3x fa-fw fa-ruble"></i></a>
+        </div>
+        <div class="col-xs-4">
+          <a href="#" class="btn btn-block btn-sm btn-warning-outline" data-toggle="modal" data-target="#modal3" aria-pressed="false"><i class="fa fa-3x fa-exchange fa-fw"></i></a>
+        </div>
+        <div class="col-xs-4">
+          <a class="text-success"><i class="fa fa-3x fa-fw fa-bitcoin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="" draggable="true">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+<div id="chart-container"></div>
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-xs-center">
+      
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+        
+        
+
+
+
+
+
+
+
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="modal" id="modal1">
+    <div class="modal-dialog" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title"></h1>
+              <div class="modal-body">
+                
+            <center><iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/embed/shop.xml?account=410014280151381&amp;quickpay=shop&amp;payment-type-choice=on&amp;mobile-payment-type-choice=on&amp;writer=buyer&amp;targets-hint=%D1%81%D1%83%D0%BC%D0%BC%D0%B0+%2F+%D0%BD%D0%B0%D0%B8%D0%BC%D0%B5%D0%BD%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5&amp;default-sum=&amp;button-text=03&amp;comment=on&amp;hint=%D0%BA%D0%BE%D0%BC%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%80%D0%B8%D0%B9&amp;successURL="
+                width="450" height="279"></iframe></center>
+                
+            <p></p>
+            </div>
+            <div class="modal-footer">
+           
+              </div>
+            </div>
+           
+          </div>
+         
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="modal" id="modal2">
+    <div class="modal-dialog" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title"></h1>
+          <div class="modal-body">
+            
+            
+            <center>
+              <div class="row">
+
+                <div class="col-lg-3 text-xs-center">
+                  <script type="text/javascript">
+                    crypt_single_base_currency = "Bitcoin (BTC)";crypt_single_target_currency = "Ruble (RUR)";crypt_single_font_size = "small";crypt_single_border_width = 2;
+                  </script>
+                  <script type="text/javascript" src="single_widget.js"></script>
+                </div>
+                <div class="col-lg-3 text-xs-center">
+                  <script type="text/javascript">
+                    crypt_single_base_currency = "Bytecoin (BCN)";crypt_single_target_currency = "Ruble (RUR)";crypt_single_font_size = "small";crypt_single_border_width = 2;
+                  </script>
+                  <script type="text/javascript" src="single_widget.js"></script>
+                </div>
+                <div class="col-lg-3 text-xs-center">
+                  <script type="text/javascript">
+                    crypt_single_base_currency = "Ethereum (ETH)";crypt_single_target_currency = "Ruble (RUR)";crypt_single_font_size = "small";crypt_single_border_width = 2;
+                  </script>
+                  <script type="text/javascript" src="single_widget.js"></script>
+                </div>
+                <div class="col-lg-3 text-xs-center">
+                  <script type="text/javascript">
+                    crypt_single_base_currency = "Monero (XMR)";crypt_single_target_currency = "Ruble (RUR)";crypt_single_font_size = "small";crypt_single_border_width = 2;
+                  </script>
+                  <script type="text/javascript" src="single_widget.js"></script>
+                </div>
+
+              </div>
+            </center>
+            
+            
+            <p></p>
+            </div>
+            <div class="modal-footer">
+              </div>
+            </div>
+           
+          </div>
+         
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="modal" id="modal3">
+    <div class="modal-dialog" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title"></h1>
+              <div class="modal-body">
+                
+            <center><iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://cryptowat.ch">
+"
+                width="100%" height="100%"></iframe></center>
+                
+            <p></p>
+            </div>
+            <div class="modal-footer">
+           
+              </div>
+            </div>
+           
+          </div>
+         
+        </div>
+       
+      </div>
+    </div>
+  </div>
+   
+  
+</body>
+
+</html>

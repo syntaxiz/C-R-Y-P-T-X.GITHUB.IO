@@ -365,226 +365,7 @@
   
   
   
-  <!DOCTYPE html>
-<!-- saved from url=(0027)https://blockchain.info/ru/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>(function blockPopupsFunc(popupBlockMessage, showNotification, extensionId, rules) {
-    var stndz = {
-        originalWindowOpen: window.open,
-        originalDocumentCreateElement: document.createElement,
-        originalDocumentCreateEvent: document.createEvent,
-        lastCreatedAnchor: undefined,
-        lastCreatedAnchorTime: undefined,
-        allowed: false
-    };
-
-    var popupRegexRules = null;
-    function isPopup(url) {
-        if (popupRegexRules == null) {
-            popupRegexRules = [];
-            for (var i = 0; i < rules.length; i++) {
-                popupRegexRules.push(new RegExp(rules[i], "i"));
-            }
-        }
-
-        for (var i = 0; i < popupRegexRules.length; i++) {
-            if (popupRegexRules[i].test(url))
-                return true;
-        }
-
-        return false;
-    }
-
-    var windowOpenAllowRegex = /^(http(s)?:)?\/\/([^\/]*\.)?(pinterest\.com|twitter\.com|paypal\.com|yahoo\.com|facebook\.com|linkedin\.com|salesforce\.com|amazon\.co|google\.co)/i;
-    var windowOpenAllowHosts = /^http(s):\/\/([^\/]*\.)?(search\.yahoo\.com|linkedin\.com|facebook\.com)/i;
-    window.open = function() {
-        var popupArguments = arguments;
-        var openPopupFunc = function() {
-            return stndz.originalWindowOpen.apply(window, popupArguments);
-        };
-
-        if (stndz.allowed)
-            return openPopupFunc();
-
-        var popupUrl = arguments.length >= 1 && arguments[0] && typeof arguments[0] == "string" ? arguments[0] : null;
-        var block = isPopup(popupUrl);
-        if (block) {
-            showPopupNotificationWindow('ad-popup', arguments, openPopupFunc);
-            return {};
-        }
-
-        var allow = windowOpenAllowRegex.test(popupUrl) || windowOpenAllowHosts.test(window.location.href);
-        if (allow)
-            return openPopupFunc();
-
-        var targetName = arguments.length >= 2 ? arguments[1] : null;
-        if (targetName == '_parent' || targetName == '_self' || targetName == '_top')
-            return openPopupFunc();
-
-        if (!window.event)
-            return openPopupFunc();
-
-        if (popupUrl) {
-            try {
-                if (popupUrl.indexOf("/") == 0 && popupUrl.indexOf("//") != 0)
-                    return openPopupFunc();
-
-                var windowOpenUrl = new URL(popupUrl);
-                if (windowOpenUrl.host.indexOf(window.location.host) > -1 || (windowOpenUrl.host != "" && window.location.host.indexOf(windowOpenUrl.host) > -1))
-                    return openPopupFunc();
-            } catch(e) { }
-        }
-
-        var currentTargetValid = window.event &&
-            window.event.currentTarget &&
-            window.event.currentTarget !== window &&
-            window.event.currentTarget !== document &&
-            window.event.currentTarget !== document.body;
-
-        var targetValid = window.event &&
-            window.event.target &&
-            window.event.target.tagName == 'A' &&
-            window.event.target.href.indexOf('http') == 0;
-
-        if (currentTargetValid || targetValid)
-            return openPopupFunc();
-
-        if (showNotification)
-            showPopupNotificationWindow('not-user-initiated', arguments, openPopupFunc);
-
-        return {};
-    };
-
-    window.stndzStopPopupBlocking = function(iframeGuid) {
-        if (popupBlockMessage.iframeGuid == iframeGuid) {
-            stndz.allowed = true;
-        }
-    };
-
-    window.stndzResumePopupBlocking = function(iframeGuid) {
-        if (popupBlockMessage.iframeGuid == iframeGuid) {
-            stndz.allowed = false;
-        }
-    };
-
-    document.createElement = function() {
-        var element = stndz.originalDocumentCreateElement.apply(document, arguments);
-        if (element.tagName == 'A') {
-            stndz.lastCreatedAnchorTime = new Date();
-            stndz.lastCreatedAnchor = element;
-        }
-
-        return element;
-    };
-
-    var anchorPopupsExcludedHosts = { 'sh.st': true };
-    document.createEvent = function() {
-        if (!stndz.allowed && arguments[0].toLocaleLowerCase().indexOf('mouse') > -1 && stndz.lastCreatedAnchorTime && new Date() - stndz.lastCreatedAnchorTime < 50) {
-            if (anchorPopupsExcludedHosts[document.location.host]) {
-                stndz.lastCreatedAnchor.target = "_top";
-            } else if (windowOpenAllowRegex.test(stndz.lastCreatedAnchor.href) == false) {
-                var anchor = stndz.lastCreatedAnchor;
-                showPopupNotificationWindow('create-link', null, function() { anchor.click(); });
-                return null;
-            }
-        }
-
-        return stndz.originalDocumentCreateEvent.apply(document, arguments);
-    };
-
-    window.addEventListener("message", function(event) {
-        switch (event.data.type) {
-            case 'stndz-show-popup-notification':
-                if (window !== window.top)
-                    return;
-
-                stndz.stndzPopupActionWindow = event.source;
-                stndz.stndzPopupClicked = function(option) {
-                    stndz.hidePopupNotification();
-                    stndz.stndzPopupActionWindow.postMessage({type: 'stndz-popup-action', option: option}, event.origin);
-                };
-
-                if (stndz.popupNotificationOpen) {
-                    stndz.highlightPopupNotification();
-                } else if (stndz.popupNotificationOpen === false) { // if it was previously opened just show it, the delegate to open the new window was created above
-                    stndz.showPopupNotification();
-                } else {
-                    var notificationElement = createNotificationOnPage();
-
-                    setTimeout(function() {
-                        stndz.showPopupNotification();
-                    }, 0);
-
-                    stndz.showPopupNotification = function() {
-                        stndz.popupNotificationOpen = true;
-
-                        notificationElement.style.top = '0px';
-
-                        var hidePopupNotificationId;
-                        stndz.hidePopupNotification = function() {
-                            stndz.popupNotificationOpen = false;
-                            notificationElement.style.top = '-40px';
-                            notificationElement.style.height = '30px';
-                            clearTimeout(hidePopupNotificationId);
-                        };
-
-                        hidePopupNotificationId = setTimeout(stndz.hidePopupNotification, 30 * 1000);
-                        notificationElement.onmouseover = function() {
-                            clearTimeout(hidePopupNotificationId);
-                        };
-                    };
-
-                    var helpOpen = false;
-                    var originalBackground = notificationElement.style.background;
-                    stndz.highlightPopupNotification = function() {
-                        notificationElement.style.background = '#FFFBCC';
-                        setTimeout(function() {
-                            notificationElement.style.background = originalBackground;
-                        }, 1000);
-
-                        notificationElement.style.height = '120px';
-                        helpOpen = true;
-                    };
-
-                    stndz.togglePopupNotificationHelp = function() {
-                        notificationElement.style.height = helpOpen ? '30px' : '120px';
-                        helpOpen = !helpOpen;
-                    };
-                }
-
-                break;
-
-            case 'stndz-popup-action':
-                stndz.stndzPopupAction && stndz.stndzPopupAction(event.data.option);
-                break;
-        }
-    }, false);
-
-    function allowPopupsOnThisPage() {
-        stndz.allowed = true;
-    }
-
-    function showPopupNotificationWindow(blockType, args, openPopupFunc) {
-        if (!showNotification)
-            return;
-
-        stndz.stndzPopupAction = function(option) {
-            popupBlockMessage.arguments = args;
-            popupBlockMessage.option = option;
-            window.postMessage(popupBlockMessage, '*');
-
-            if (option == 'once' || option == 'allow') {
-                allowPopupsOnThisPage();
-                openPopupFunc && openPopupFunc();
-            } else {
-                showNotification = false;
-            }
-        };
-
-        window.top.postMessage({
-            type: 'stndz-show-popup-notification',
-            iframeGuid: popupBlockMessage.iframeGuid,
-            blockType: blockType
-        }, '*');
+ 
     }
 
     function createNotificationOnPage() {
@@ -659,57 +440,20 @@
     <title>Обозреватель блоков биткоин - Blockchain.info</title>
     
 
-<link rel="stylesheet" href="https://blockchain.info/Resources/bootstrap.min.css"><link rel="stylesheet" href="https://blockchain.info/Resources/bootstrap-responsive.min.css"><link rel="stylesheet" href="https://blockchain.info/Resources/overrides.min.css?32d537e24198b4d0"><script async="" src="./b_files/analytics.js"></script><script src="./b_files/jquery.min.js" type="text/javascript"></script><script type="text/javascript" src="./b_files/bootstrap.min.js"></script><script src="./b_files/shared.min.js" type="text/javascript"></script><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<script async="" src="./b_files/analytics.js"></script><script src="./b_files/jquery.min.js" type="text/javascript"></script><script type="text/javascript" src="./b_files/bootstrap.min.js"></script><script src="./b_files/shared.min.js" type="text/javascript"></script><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
 <script src="./b_files/analytics(1).js"></script>
 
 
     <script type="text/javascript" src="./b_files/homepage.min.js"></script>
 
-    <link rel="stylesheet" href="https://blockchain.info/Resources/zeroblock.min.css?32d537e24198b4d0">
+    
 
     <meta name="Description" content="Обозреватель блоков биткоин и статистика валюты. Посмотреть подробную информацию обо всех биткоин-транзакциях и блоках.">
 <style type="text/css"> .adv{display: inherit;} .basic{display: none;} </style><link id="vk_link" type="text/css" rel="stylesheet" href="chrome-extension://bafgbdpfglndjaohfahffcjmcdlhncnj/assets/css/vk-saver_style_2.0.css"></head>
 <body>
 
-    <div class="navbar" style="height:40px;overflow:visible">
-        <div class="navbar-inner" style="height:43px;">
-            <div class="container">
-                <div class="logo hidden-phone hidden-tablet" style="padding-top: 0px;"><a href="./b_files/b.html" style="line-height: 60px;"><img border="0" src="./b_files/blockchain-logo-vector.svg" style="width:auto;height:40px" alt="Обозреватель блоков биткоин и статистика валюты"></a></div>
-
-                <ul class="nav">
-                    <li class="active"><a href="./b_files/b.html" title="Blockchain.info главная">Главная</a></li>
-                    <li><a href="https://blockchain.info/ru/charts" title="Графики Биткоин">Графики</a></li>
-                    <li><a href="https://blockchain.info/ru/stats" title="Статистика Биткоин">Статистика</a></li>
-                    <li><a class="hidden-phone" href="https://markets.blockchain.info/" title="Рынки Биткоин">Рынки</a></li>
-                    <li class="hidden-phone"><a href="https://blockchain.info/ru/api" title="Инструменты для разработчиков">API</a></li>
-                    <li><a href="https://blockchain.info/ru/wallet" title="Биткоин-кошелек">Кошелек</a></li>
-                </ul>
-
-                
-                    <ul class="nav pull-right hidden-phone">
-                        <li class="dropdown">
-                            <a href="https://blockchain.info/ru/#" class="dropdown-toggle" data-toggle="dropdown">
-                                <span>Русский</span>
-                                <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu" style="min-width:20px" id="languages_select">
-                                <li><a tabindex="-1" href="https://blockchain.info/id" data-code="id" title="Indonesian"><span>Bahasa Indonesia</span></a></li><li><a tabindex="-1" href="https://blockchain.info/da" data-code="da" title="Danish"><span>Dansk</span></a></li><li><a tabindex="-1" href="https://blockchain.info/de" data-code="de" title="German"><span>Deutsch</span></a></li><li><a tabindex="-1" href="https://blockchain.info/en" data-code="en" title="English"><span>English</span></a></li><li><a tabindex="-1" href="https://blockchain.info/es" data-code="es" title="Spanish"><span>Español</span></a></li><li><a tabindex="-1" href="https://blockchain.info/fr" data-code="fr" title="French"><span>Français</span></a></li><li><a tabindex="-1" href="https://blockchain.info/it" data-code="it" title="Italian"><span>Italiano</span></a></li><li><a tabindex="-1" href="https://blockchain.info/hu" data-code="hu" title="Hungarian"><span>Magyar</span></a></li><li><a tabindex="-1" href="https://blockchain.info/nl" data-code="nl" title="Dutch"><span>Nederlands</span></a></li><li><a tabindex="-1" href="https://blockchain.info/no" data-code="no" title="Norwegian"><span>Norsk</span></a></li><li><a tabindex="-1" href="https://blockchain.info/pl" data-code="pl" title="Polish"><span>Polski</span></a></li><li><a tabindex="-1" href="https://blockchain.info/pt" data-code="pt" title="Portuguese"><span>Português</span></a></li><li><a tabindex="-1" href="https://blockchain.info/ro" data-code="ro" title="Romanian"><span>Română</span></a></li><li><a tabindex="-1" href="https://blockchain.info/sl" data-code="sl" title="Slovenian"><span>Slovenščina</span></a></li><li><a tabindex="-1" href="https://blockchain.info/sv" data-code="sv" title="Swedish"><span>Svenska</span></a></li><li><a tabindex="-1" href="https://blockchain.info/vi" data-code="vi" title="Vietnam"><span>Tiếng</span></a></li><li><a tabindex="-1" href="https://blockchain.info/tr" data-code="tr" title="Turkish"><span>Türkçe</span></a></li><li><a tabindex="-1" href="https://blockchain.info/el" data-code="el" title="Greek"><span>Ελληνικά</span></a></li><li><a tabindex="-1" href="https://blockchain.info/ru" data-code="ru" title="Russian"><span>Русский</span></a></li><li><a tabindex="-1" href="https://blockchain.info/bg" data-code="bg" title="Bulgarian"><span>български език</span></a></li><li><a tabindex="-1" href="https://blockchain.info/hi" data-code="hi" title="Hindi"><span>हिन्दी</span></a></li><li><a tabindex="-1" href="https://blockchain.info/th" data-code="th" title="Thai"><span>ภาษาไทย</span></a></li><li><a tabindex="-1" href="https://blockchain.info/ja" data-code="ja" title="Japanese"><span>日本語</span></a></li><li><a tabindex="-1" href="https://blockchain.info/zh-cn" data-code="zh-cn" title="Chinese"><span>汉语</span></a></li><li><a tabindex="-1" href="https://blockchain.info/ko" data-code="ko" title="Korean"><span>한국어</span></a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                
-
-                
-                    <form action="https://blockchain.info/ru/search" method="GET" class="navbar-search pull-right hidden-phone">
-                        <input type="text" placeholder="Поиск" name="search" class="search-query">
-                    </form>
-                
-
-                
-            </div>
-        </div>
-    </div>
+   
 
 
 
